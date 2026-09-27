@@ -1,0 +1,321 @@
+.dashboard {
+  min-height: 100vh;
+  background: #f5f6fa;
+  padding-bottom: 90px;
+  box-sizing: border-box;
+}
+h1{
+  color:white;
+}
+.dashboard-header {
+  background: #06284d;
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.dashboard-header p {
+  margin: 5px 0 0;
+  font-size: 20px;
+}
+
+.add-btn {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 18px;
+  background: white;
+  font-size: 36px;
+  cursor: pointer;
+}
+/* Card container grid */
+.credentials-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Individual credential card */
+.credential {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.credential:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.1);
+}
+
+.credential p {
+  margin: 0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.credential p:first-child {
+  font-size: 17px;
+  font-weight: 600;
+  color: #06284d;
+  margin-bottom: 4px;
+}
+/* Login Page */
+.login-page {
+  background-image: url('./assets/mimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Background overlay for better contrast */
+.login-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 40, 77, 0.45);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+/* Login Card - Frosted Grey Transparent */
+.login-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  max-width: 400px;
+  padding: 36px 30px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  text-align: center;
+  box-sizing: border-box;
+  animation: loginCardFadeIn 0.4s ease-out;
+}
+
+@keyframes loginCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 16px auto;
+  object-fit: contain;
+}
+
+.login-card > p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cbd5e1;
+  margin: 0 0 24px 0;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+/* Form Inputs & Labels */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f1f5f9;
+  text-transform: capitalize;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  border-color: #38bdf8;
+  background-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+/* Error validation messages */
+.error {
+  color: #f87171;
+  font-size: 12px;
+  font-weight: 500;
+  margin: -8px 0 0 0;
+  text-align: left;
+}
+
+/* Login submit button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 6px;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #0369a1, #075985);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.45);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+}
+/* Bottom Navigation Bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #06284d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 14px 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.bottom-nav button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bottom-nav button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #38bdf8;
+}
+
+.bottom-nav button:active {
+  transform: scale(0.95);
+}
+.middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0 8px;
+}
+
+.signup-btn {
+  background-color: transparent;
+  color: #e2e8f0;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.signup-btn:hover {
+  color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.12);
+  transform: translateY(-1px);
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+.signup-btn:active {
+  transform: scale(0.96);
+}
+
+.forget {
+  background-color: transparent;
+  color: #e2e8f0;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.forget:hover {
+  color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.12);
+  transform: translateY(-1px);
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+}
+
+.forget:active {
+  transform: scale(0.96);
+}
+.sign{
+ color:black; 
+}
+
