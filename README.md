@@ -1,4 +1,8 @@
-# React + Vite
+# SkillStack Frontend
+
+Front-end project for SkillStack, built with React and Vite.
+
+## Development setup
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
