@@ -315,7 +315,118 @@ h1{
 .forget:active {
   transform: scale(0.96);
 }
-.sign{
- color:black; 
+
+/* Signup Page Layout */
+.main-sign {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background-image: url('./assets/mimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.main-sign::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 40, 77, 0.45);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.white {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  padding: 36px 32px;
+  box-sizing: border-box;
+}
+
+.sign-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.skilli {
+  color: #06284d;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.sign-1 .image {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  margin: 0;
+}
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+/* High contrast inputs and labels for the white signup card */
+.white .form-group label {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.white .form-group input {
+  color: #0f172a;
+  background-color: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+}
+
+.white .form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.white .form-group input:focus {
+  border-color: #0284c7;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.Google {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  color: #1e293b;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.Google:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
 }
 
